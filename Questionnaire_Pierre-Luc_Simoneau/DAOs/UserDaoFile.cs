@@ -28,7 +28,7 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         public User? ChercherParLoginMPType(string login, string mp, bool type)
         {
             List<User> users = ChercherTout();
-            return users.Find(u => u.Login == login && u.MotPasse == mp && u.Type);
+            return users.Find(u => u.Login == login && u.MotPasse == mp && u.Type==type);
         }
 
         public List<User> ChercherTout()
