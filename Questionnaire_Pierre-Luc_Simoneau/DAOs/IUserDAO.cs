@@ -11,9 +11,9 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         void Ajouter(User u);
         void Supprimer(User u);
         void Modifier(User u);
-        List<User> ChercherTout();
-        User ChercherParLogin(string login);
-        User ChercherParLoginMPType(string login, string mp, bool type);
+        List<User>? ChercherTout();
+        User? ChercherParLogin(string login);
+        User? ChercherParLoginMPType(string login, string mp, bool type);
 
     }
 }

@@ -13,14 +13,16 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
             throw new NotImplementedException();
         }
 
-        public User ChercherParLogin(string login)
+        public User? ChercherParLogin(string login)
         {
-            throw new NotImplementedException();
+            List<User> users = ChercherTout();
+            return users.Find(u => u.Login == login);
         }
 
-        public User ChercherParLoginMPType(string login, string mp, bool type)
+        public User? ChercherParLoginMPType(string login, string mp, bool type)
         {
-            throw new NotImplementedException();
+            List<User> users = ChercherTout();
+            return users.Find(u => u.Login == login && u.MotPasse==mp && u.Type);
         }
 
         public List<User> ChercherTout()
@@ -30,7 +32,8 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
 
         public void Modifier(User u)
         {
-            throw new NotImplementedException();
+            Supprimer(u);
+            Ajouter(u);
         }
 
         public void Supprimer(User u)

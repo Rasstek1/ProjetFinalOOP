@@ -104,6 +104,7 @@
             // 
             // textBoxTelephone
             // 
+            this.textBoxTelephone.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxTelephone.Location = new System.Drawing.Point(170, 98);
             this.textBoxTelephone.Name = "textBoxTelephone";
             this.textBoxTelephone.Size = new System.Drawing.Size(468, 32);
@@ -111,6 +112,7 @@
             // 
             // textBoxPrenom
             // 
+            this.textBoxPrenom.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxPrenom.Location = new System.Drawing.Point(170, 60);
             this.textBoxPrenom.Name = "textBoxPrenom";
             this.textBoxPrenom.Size = new System.Drawing.Size(468, 32);
@@ -118,6 +120,7 @@
             // 
             // textBoxNom
             // 
+            this.textBoxNom.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxNom.Location = new System.Drawing.Point(170, 22);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(468, 32);
@@ -211,6 +214,7 @@
             // 
             // textBoxCP
             // 
+            this.textBoxCP.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxCP.Location = new System.Drawing.Point(170, 174);
             this.textBoxCP.Name = "textBoxCP";
             this.textBoxCP.Size = new System.Drawing.Size(468, 32);
@@ -218,6 +222,7 @@
             // 
             // textBoxAdrProvince
             // 
+            this.textBoxAdrProvince.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxAdrProvince.Location = new System.Drawing.Point(170, 136);
             this.textBoxAdrProvince.Name = "textBoxAdrProvince";
             this.textBoxAdrProvince.Size = new System.Drawing.Size(468, 32);
@@ -225,6 +230,7 @@
             // 
             // textBoxAdrVille
             // 
+            this.textBoxAdrVille.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxAdrVille.Location = new System.Drawing.Point(170, 98);
             this.textBoxAdrVille.Name = "textBoxAdrVille";
             this.textBoxAdrVille.Size = new System.Drawing.Size(468, 32);
@@ -232,6 +238,7 @@
             // 
             // textBoxAdrRue
             // 
+            this.textBoxAdrRue.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxAdrRue.Location = new System.Drawing.Point(170, 60);
             this.textBoxAdrRue.Name = "textBoxAdrRue";
             this.textBoxAdrRue.Size = new System.Drawing.Size(468, 32);
@@ -239,6 +246,7 @@
             // 
             // textBoxAdrNum
             // 
+            this.textBoxAdrNum.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxAdrNum.Location = new System.Drawing.Point(170, 22);
             this.textBoxAdrNum.Name = "textBoxAdrNum";
             this.textBoxAdrNum.Size = new System.Drawing.Size(468, 32);
@@ -312,6 +320,7 @@
             // 
             // textBoxCMP
             // 
+            this.textBoxCMP.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxCMP.Location = new System.Drawing.Point(227, 98);
             this.textBoxCMP.Name = "textBoxCMP";
             this.textBoxCMP.Size = new System.Drawing.Size(264, 32);
@@ -319,6 +328,7 @@
             // 
             // textBoxMP
             // 
+            this.textBoxMP.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxMP.Location = new System.Drawing.Point(227, 60);
             this.textBoxMP.Name = "textBoxMP";
             this.textBoxMP.Size = new System.Drawing.Size(264, 32);
@@ -326,6 +336,7 @@
             // 
             // textBoxLogin
             // 
+            this.textBoxLogin.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxLogin.Location = new System.Drawing.Point(227, 22);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(264, 32);
@@ -387,7 +398,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 819);
+            this.ClientSize = new System.Drawing.Size(683, 703);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox4);
