@@ -45,15 +45,16 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         }
         public override string ToString()
         {
-            return Nom + ":)"+
-                Prenom + ":)" +
-                Telephone + ":)" +
-                Type + ":)" +
-                AdrNum + ":)" +
-                AdrRue + ":)" +
-                AdrVille + ":)" +
-                AdrCP + ":)" +
-                Login + ":)" +
+            return Nom + ";"+
+                Prenom + ";" +
+                Telephone + ";" +
+                Type + ";" +
+                AdrNum + ";" +
+                AdrRue + ";" +
+                AdrVille + ";" +
+                AdrProvince + ";" +
+                AdrCP + ";" +
+                Login + ";" +
                 MotPasse;
         }
 

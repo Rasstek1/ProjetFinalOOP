@@ -8,7 +8,7 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
 {
     public class UserDaoBD : IUserDAO
     {
-        private string path = @"..\..\FILES\users.txt";
+        
         public void Ajouter(User u)
         {
             throw new NotImplementedException();
