@@ -66,7 +66,17 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
 
         public void Supprimer(User u)
         {
-            throw new NotImplementedException();
+            //créé une liste d'utilisateur 
+            List<User> list = ChercherTout();
+            //supprime l'utilisateur de la liste
+            list.Remove(u);
+            //vide le fichier
+            File.WriteAllText(path, "");
+            //ajoute les utilisateurs de la liste dans le fichier
+            foreach (User user in list)
+            {
+                Ajouter(user);
+            }
         }
     }
 }

@@ -27,19 +27,25 @@ namespace Questionnaire_Pierre_Luc_Simoneau
 
             var userDAO = UserDAOFactory.CreerUserDAO("FILE");
             var user = userDAO.ChercherParLoginMPType(login,mp,type);
-            if(user!= null)
+            if(user == null)
             {
-                MessageBox.Show("Utilisateur trouvé");
+                MessageBox.Show("Aucun utilisateur trouvé");
+                 
+            }
+            else if(type)
+            {
+                new PanelCentrale().Show();
+                
             }
             else
             {
-                MessageBox.Show("Utilisateur non trouvé");
+                new UserPanel().Show();
             }
         }
 
         private void linkLabelNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new FormUser().Show();
+            new Form2().Show();
         }
     }
 }
