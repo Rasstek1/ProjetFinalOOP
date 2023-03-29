@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBoxCMP = new System.Windows.Forms.TextBox();
             this.textBoxMP = new System.Windows.Forms.TextBox();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -58,11 +60,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtChercherLogin = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBoxCMP = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnModifier = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnChercher = new System.Windows.Forms.Button();
+            this.ErrorMsg = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -86,6 +87,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Identifiant";
             // 
+            // textBoxCMP
+            // 
+            this.textBoxCMP.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxCMP.Location = new System.Drawing.Point(227, 98);
+            this.textBoxCMP.Name = "textBoxCMP";
+            this.textBoxCMP.Size = new System.Drawing.Size(264, 32);
+            this.textBoxCMP.TabIndex = 16;
+            // 
             // textBoxMP
             // 
             this.textBoxMP.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -101,6 +110,16 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(264, 32);
             this.textBoxLogin.TabIndex = 14;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(18, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(177, 21);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Confirmer Mot de passe";
             // 
             // label11
             // 
@@ -375,24 +394,6 @@
             this.label13.TabIndex = 22;
             this.label13.Text = "Login";
             // 
-            // textBoxCMP
-            // 
-            this.textBoxCMP.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxCMP.Location = new System.Drawing.Point(227, 98);
-            this.textBoxCMP.Name = "textBoxCMP";
-            this.textBoxCMP.Size = new System.Drawing.Size(264, 32);
-            this.textBoxCMP.TabIndex = 16;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(18, 104);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(177, 21);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Confirmer Mot de passe";
-            // 
             // btnModifier
             // 
             this.btnModifier.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -402,6 +403,7 @@
             this.btnModifier.TabIndex = 20;
             this.btnModifier.Text = "Modifier";
             this.btnModifier.UseVisualStyleBackColor = true;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
             // btnAnnuler
             // 
@@ -412,6 +414,7 @@
             this.btnAnnuler.TabIndex = 21;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // btnChercher
             // 
@@ -424,10 +427,22 @@
             this.btnChercher.UseVisualStyleBackColor = true;
             this.btnChercher.Click += new System.EventHandler(this.btnChercher_Click);
             // 
+            // ErrorMsg
+            // 
+            this.ErrorMsg.AutoSize = true;
+            this.ErrorMsg.BackColor = System.Drawing.Color.IndianRed;
+            this.ErrorMsg.Location = new System.Drawing.Point(506, 580);
+            this.ErrorMsg.Name = "ErrorMsg";
+            this.ErrorMsg.Size = new System.Drawing.Size(120, 30);
+            this.ErrorMsg.TabIndex = 25;
+            this.ErrorMsg.Text = "Les mots de passes \r\ndoivent correspondre";
+            this.ErrorMsg.Visible = false;
+            // 
             // ModifierUtilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ErrorMsg);
             this.Controls.Add(this.btnChercher);
             this.Controls.Add(this.txtChercherLogin);
             this.Controls.Add(this.label13);
@@ -492,5 +507,6 @@
         private Button btnModifier;
         private Button btnAnnuler;
         private Button btnChercher;
+        private Label ErrorMsg;
     }
 }

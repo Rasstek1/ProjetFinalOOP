@@ -37,5 +37,7 @@ namespace Questionnaire_Pierre_Luc_Simoneau
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = listUser;
         }
+
+        
     }
 }

@@ -18,7 +18,21 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         public List<string> PropositionSM { get; set; }
         public List<string> ReponseSM { get; set; }
         
-
+        private Question(string enonce, bool type)
+        {
+            Id = ++count;
+            Enonce = enonce;
+            Type = type;
+        }
+        public Question(string enonce, bool type,bool reponseVF) : this(enonce, type)
+        {
+            ReponseVF = reponseVF;
+        }
+        public Question(string enonce, bool type,List<string> propositionSM, List<string> reponseSM) : this(enonce, type)
+        {
+            PropositionSM = propositionSM;
+            ReponseSM = reponseSM;
+        }
 
     }
 }

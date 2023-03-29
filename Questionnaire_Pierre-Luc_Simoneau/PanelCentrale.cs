@@ -19,12 +19,20 @@ namespace Questionnaire_Pierre_Luc_Simoneau
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panel1.Controls.Clear();
             panel1.Controls.Add(new AjouterUtilisateur());
         }
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panel1.Controls.Clear();
             panel1.Controls.Add(new SupprimerUtilisateur());
+        }
+
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.Controls.Add(new ModifierUtilisateur());
         }
     }
 }
