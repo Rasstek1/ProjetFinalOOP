@@ -45,7 +45,7 @@ namespace Questionnaire_Pierre_Luc_Simoneau
                     {
                         this.ParentForm.Close();
                     }
-                    this.Hide();
+                    
 
                 }
             }catch(Exception ex)
@@ -72,8 +72,11 @@ namespace Questionnaire_Pierre_Luc_Simoneau
             textBoxMP.Text = string.Empty;
             textBoxCMP.Text = string.Empty;
             ErrorMsg.Visible = false;
-            
-            this.Hide();
+            if (this.ParentForm.Name == "Form2")
+            {
+                this.ParentForm.Close();
+            }
+
         }
     }
 }
