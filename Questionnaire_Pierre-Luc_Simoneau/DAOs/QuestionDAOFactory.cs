@@ -8,5 +8,10 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
 {
     internal class QuestionDAOFactory
     {
+        public static IQuestionDAO CreerQuestionDAO(string type)
+        {
+            if (type == "FILE") return new QuestionDaoFile();
+            else return new QuestionDaoBD();
+        }
     }
 }
