@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,12 +16,15 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         public string Enonce { get; set; }
         public bool Type { get; set;}
         public bool ReponseVF { get; set; }
-        public List<string> PropositionSM { get; set; }
-        public List<string> ReponseSM { get; set; }
-        
-        private Question(string enonce, bool type)
+        public List<string>? PropositionSM { get; set; }
+        public List<string>? ReponseSM { get; set; }
+
+        public Question()
         {
             Id = ++count;
+        }
+        private Question(string enonce, bool type):this()
+        {            
             Enonce = enonce;
             Type = type;
         }
@@ -33,6 +37,26 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
             PropositionSM = propositionSM;
             ReponseSM = reponseSM;
         }
+        
 
+        public override bool Equals(object? obj)
+        {
+            return obj is Question q && q.Id == Id;
+        }
+
+        public override string ToString()
+        {
+            return Id + ";" +
+                Enonce + ";" +
+                Type + ";" +
+                ReponseVF + ";" +
+                PropositionSM + ";" +
+                ReponseSM;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id, Enonce, Type, ReponseVF, PropositionSM, ReponseSM);
+        }
     }
 }

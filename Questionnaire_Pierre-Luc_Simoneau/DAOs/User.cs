@@ -8,17 +8,17 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
 {
     public class User
     {
-        public string Nom { get; set; }
-        public string Prenom { get; set; }
-        public string Telephone { get; set; }
+        public string? Nom { get; set; }
+        public string? Prenom { get; set; }
+        public string? Telephone { get; set; }
         public bool Type { get; set; }
         public int AdrNum { get; set; }
-        public string AdrRue { get; set; }
-        public string AdrVille { get; set; }
-        public string AdrProvince { get; set; }
-        public string AdrCP { get; set; }
+        public string? AdrRue { get; set; }
+        public string? AdrVille { get; set; }
+        public string? AdrProvince { get; set; }
+        public string? AdrCP { get; set; }
         public string Login { get; set; }
-        public string MotPasse { get; set; }
+        public string? MotPasse { get; set; }
 
         public User(string nom, string prenom, string telephone, bool type, int adrNum, string adrRue, string adrVille, string adrProvince, string adrCP, string login, string motPasse)
         {
@@ -58,5 +58,21 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
                 MotPasse;
         }
 
+        public override int GetHashCode()
+        {
+            HashCode hash = new HashCode();
+            hash.Add(Nom);
+            hash.Add(Prenom);
+            hash.Add(Telephone);
+            hash.Add(Type);
+            hash.Add(AdrNum);
+            hash.Add(AdrRue);
+            hash.Add(AdrVille);
+            hash.Add(AdrProvince);
+            hash.Add(AdrCP);
+            hash.Add(Login);
+            hash.Add(MotPasse);
+            return hash.ToHashCode();
+        }
     }
 }
