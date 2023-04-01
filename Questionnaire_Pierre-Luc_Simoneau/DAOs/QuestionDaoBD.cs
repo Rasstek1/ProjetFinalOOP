@@ -29,6 +29,5 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
             throw new NotImplementedException();
         }
     }
-    {
-    }
+
 }

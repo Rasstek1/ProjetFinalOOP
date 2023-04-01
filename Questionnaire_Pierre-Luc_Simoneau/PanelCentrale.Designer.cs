@@ -28,137 +28,126 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.gestionUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chercherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionQuestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.chercherToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionRésultatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            gestionUserToolStripMenuItem = new ToolStripMenuItem();
+            ajouterToolStripMenuItem = new ToolStripMenuItem();
+            supprimerToolStripMenuItem = new ToolStripMenuItem();
+            modifierToolStripMenuItem = new ToolStripMenuItem();
+            chercherToolStripMenuItem = new ToolStripMenuItem();
+            gestionQuestionToolStripMenuItem = new ToolStripMenuItem();
+            ajouterToolStripMenuItem1 = new ToolStripMenuItem();
+            supprimerToolStripMenuItem1 = new ToolStripMenuItem();
+            modifierToolStripMenuItem1 = new ToolStripMenuItem();
+            chercherToolStripMenuItem1 = new ToolStripMenuItem();
+            gestionRésultatToolStripMenuItem = new ToolStripMenuItem();
+            panel1 = new Panel();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestionUserToolStripMenuItem,
-            this.gestionQuestionToolStripMenuItem,
-            this.gestionRésultatToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1072, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.Items.AddRange(new ToolStripItem[] { gestionUserToolStripMenuItem, gestionQuestionToolStripMenuItem, gestionRésultatToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1072, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // gestionUserToolStripMenuItem
             // 
-            this.gestionUserToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajouterToolStripMenuItem,
-            this.supprimerToolStripMenuItem,
-            this.modifierToolStripMenuItem,
-            this.chercherToolStripMenuItem});
-            this.gestionUserToolStripMenuItem.Name = "gestionUserToolStripMenuItem";
-            this.gestionUserToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.gestionUserToolStripMenuItem.Text = "Gestion Users";
+            gestionUserToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ajouterToolStripMenuItem, supprimerToolStripMenuItem, modifierToolStripMenuItem, chercherToolStripMenuItem });
+            gestionUserToolStripMenuItem.Name = "gestionUserToolStripMenuItem";
+            gestionUserToolStripMenuItem.Size = new Size(90, 20);
+            gestionUserToolStripMenuItem.Text = "Gestion Users";
             // 
             // ajouterToolStripMenuItem
             // 
-            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.ajouterToolStripMenuItem.Text = "Ajouter";
-            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+            ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            ajouterToolStripMenuItem.Size = new Size(180, 22);
+            ajouterToolStripMenuItem.Text = "Ajouter";
+            ajouterToolStripMenuItem.Click += ajouterToolStripMenuItem_Click;
             // 
             // supprimerToolStripMenuItem
             // 
-            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.supprimerToolStripMenuItem.Text = "Supprimer";
-            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
+            supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            supprimerToolStripMenuItem.Size = new Size(180, 22);
+            supprimerToolStripMenuItem.Text = "Supprimer";
+            supprimerToolStripMenuItem.Click += supprimerToolStripMenuItem_Click;
             // 
             // modifierToolStripMenuItem
             // 
-            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.modifierToolStripMenuItem.Text = "Modifier";
-            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
+            modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            modifierToolStripMenuItem.Size = new Size(180, 22);
+            modifierToolStripMenuItem.Text = "Modifier";
+            modifierToolStripMenuItem.Click += modifierToolStripMenuItem_Click;
             // 
             // chercherToolStripMenuItem
             // 
-            this.chercherToolStripMenuItem.Name = "chercherToolStripMenuItem";
-            this.chercherToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.chercherToolStripMenuItem.Text = "Chercher";
+            chercherToolStripMenuItem.Name = "chercherToolStripMenuItem";
+            chercherToolStripMenuItem.Size = new Size(180, 22);
+            chercherToolStripMenuItem.Text = "Chercher";
+            chercherToolStripMenuItem.Click += chercherToolStripMenuItem_Click;
             // 
             // gestionQuestionToolStripMenuItem
             // 
-            this.gestionQuestionToolStripMenuItem.CheckOnClick = true;
-            this.gestionQuestionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajouterToolStripMenuItem1,
-            this.supprimerToolStripMenuItem1,
-            this.modifierToolStripMenuItem1,
-            this.chercherToolStripMenuItem1});
-            this.gestionQuestionToolStripMenuItem.Name = "gestionQuestionToolStripMenuItem";
-            this.gestionQuestionToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
-            this.gestionQuestionToolStripMenuItem.Text = "Gestion Questions";
+            gestionQuestionToolStripMenuItem.CheckOnClick = true;
+            gestionQuestionToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ajouterToolStripMenuItem1, supprimerToolStripMenuItem1, modifierToolStripMenuItem1, chercherToolStripMenuItem1 });
+            gestionQuestionToolStripMenuItem.Name = "gestionQuestionToolStripMenuItem";
+            gestionQuestionToolStripMenuItem.Size = new Size(115, 20);
+            gestionQuestionToolStripMenuItem.Text = "Gestion Questions";
             // 
             // ajouterToolStripMenuItem1
             // 
-            this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
-            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
-            this.ajouterToolStripMenuItem1.Text = "Ajouter";
+            ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
+            ajouterToolStripMenuItem1.Size = new Size(129, 22);
+            ajouterToolStripMenuItem1.Text = "Ajouter";
             // 
             // supprimerToolStripMenuItem1
             // 
-            this.supprimerToolStripMenuItem1.Name = "supprimerToolStripMenuItem1";
-            this.supprimerToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
-            this.supprimerToolStripMenuItem1.Text = "Supprimer";
+            supprimerToolStripMenuItem1.Name = "supprimerToolStripMenuItem1";
+            supprimerToolStripMenuItem1.Size = new Size(129, 22);
+            supprimerToolStripMenuItem1.Text = "Supprimer";
             // 
             // modifierToolStripMenuItem1
             // 
-            this.modifierToolStripMenuItem1.Name = "modifierToolStripMenuItem1";
-            this.modifierToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
-            this.modifierToolStripMenuItem1.Text = "Modifier";
+            modifierToolStripMenuItem1.Name = "modifierToolStripMenuItem1";
+            modifierToolStripMenuItem1.Size = new Size(129, 22);
+            modifierToolStripMenuItem1.Text = "Modifier";
             // 
             // chercherToolStripMenuItem1
             // 
-            this.chercherToolStripMenuItem1.Name = "chercherToolStripMenuItem1";
-            this.chercherToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
-            this.chercherToolStripMenuItem1.Text = "Chercher";
+            chercherToolStripMenuItem1.Name = "chercherToolStripMenuItem1";
+            chercherToolStripMenuItem1.Size = new Size(129, 22);
+            chercherToolStripMenuItem1.Text = "Chercher";
             // 
             // gestionRésultatToolStripMenuItem
             // 
-            this.gestionRésultatToolStripMenuItem.Name = "gestionRésultatToolStripMenuItem";
-            this.gestionRésultatToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.gestionRésultatToolStripMenuItem.Text = "Gestion Résultat";
+            gestionRésultatToolStripMenuItem.Name = "gestionRésultatToolStripMenuItem";
+            gestionRésultatToolStripMenuItem.Size = new Size(104, 20);
+            gestionRésultatToolStripMenuItem.Text = "Gestion Résultat";
             // 
             // panel1
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1072, 823);
-            this.panel1.TabIndex = 1;
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 24);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1072, 823);
+            panel1.TabIndex = 1;
             // 
             // PanelCentrale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 847);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "PanelCentrale";
-            this.Text = "PanelCentrale";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1072, 847);
+            Controls.Add(panel1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Name = "PanelCentrale";
+            Text = "PanelCentrale";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

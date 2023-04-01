@@ -28,6 +28,9 @@ namespace Questionnaire_Pierre_Luc_Simoneau
             }
             else
             {
+               
+
+                
                 textBoxNom.Text = user.Nom;
                 textBoxPrenom.Text = user.Prenom;
                 textBoxTelephone.Text = user.Telephone;

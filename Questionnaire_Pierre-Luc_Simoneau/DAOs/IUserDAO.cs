@@ -14,6 +14,5 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         List<User>? ChercherTout();
         User? ChercherParLogin(string login);
         User? ChercherParLoginMPType(string login, string mp, bool type);
-
     }
 }
