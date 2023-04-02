@@ -99,26 +99,27 @@
             // ajouterToolStripMenuItem1
             // 
             ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
-            ajouterToolStripMenuItem1.Size = new Size(129, 22);
+            ajouterToolStripMenuItem1.Size = new Size(180, 22);
             ajouterToolStripMenuItem1.Text = "Ajouter";
             ajouterToolStripMenuItem1.Click += ajouterToolStripMenuItem1_Click;
             // 
             // supprimerToolStripMenuItem1
             // 
             supprimerToolStripMenuItem1.Name = "supprimerToolStripMenuItem1";
-            supprimerToolStripMenuItem1.Size = new Size(129, 22);
+            supprimerToolStripMenuItem1.Size = new Size(180, 22);
             supprimerToolStripMenuItem1.Text = "Supprimer";
+            supprimerToolStripMenuItem1.Click += supprimerToolStripMenuItem1_Click;
             // 
             // modifierToolStripMenuItem1
             // 
             modifierToolStripMenuItem1.Name = "modifierToolStripMenuItem1";
-            modifierToolStripMenuItem1.Size = new Size(129, 22);
+            modifierToolStripMenuItem1.Size = new Size(180, 22);
             modifierToolStripMenuItem1.Text = "Modifier";
             // 
             // chercherToolStripMenuItem1
             // 
             chercherToolStripMenuItem1.Name = "chercherToolStripMenuItem1";
-            chercherToolStripMenuItem1.Size = new Size(129, 22);
+            chercherToolStripMenuItem1.Size = new Size(180, 22);
             chercherToolStripMenuItem1.Text = "Chercher";
             // 
             // gestionRésultatToolStripMenuItem
