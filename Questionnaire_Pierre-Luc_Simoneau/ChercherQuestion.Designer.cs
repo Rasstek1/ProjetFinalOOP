@@ -30,12 +30,12 @@
         {
             btnConsulter = new Button();
             groupBox1 = new GroupBox();
-            dataGridConsulterQuestions = new DataGridView();
+            dataGridView1 = new DataGridView();
             groupBox2 = new GroupBox();
-            chkVF = new CheckBox();
             chkSM = new CheckBox();
+            chkVF = new CheckBox();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridConsulterQuestions).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,10 +49,11 @@
             btnConsulter.TabIndex = 7;
             btnConsulter.Text = "Consulter";
             btnConsulter.UseVisualStyleBackColor = true;
+            btnConsulter.Click += btnConsulter_Click;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(dataGridConsulterQuestions);
+            groupBox1.Controls.Add(dataGridView1);
             groupBox1.Controls.Add(btnConsulter);
             groupBox1.Controls.Add(groupBox2);
             groupBox1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point);
@@ -63,16 +64,18 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Consulter Questions";
             // 
-            // dataGridConsulterQuestions
+            // dataGridView1
             // 
-            dataGridConsulterQuestions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridConsulterQuestions.Location = new Point(18, 176);
-            dataGridConsulterQuestions.Margin = new Padding(2);
-            dataGridConsulterQuestions.Name = "dataGridConsulterQuestions";
-            dataGridConsulterQuestions.RowHeadersWidth = 62;
-            dataGridConsulterQuestions.RowTemplate.Height = 33;
-            dataGridConsulterQuestions.Size = new Size(906, 247);
-            dataGridConsulterQuestions.TabIndex = 9;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Bottom;
+            dataGridView1.Location = new Point(3, 178);
+            dataGridView1.Margin = new Padding(2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 33;
+            dataGridView1.Size = new Size(954, 396);
+            dataGridView1.TabIndex = 9;
             // 
             // groupBox2
             // 
@@ -86,16 +89,6 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Choisir le type de questions";
             // 
-            // chkVF
-            // 
-            chkVF.AutoSize = true;
-            chkVF.Location = new Point(215, 41);
-            chkVF.Name = "chkVF";
-            chkVF.Size = new Size(137, 22);
-            chkVF.TabIndex = 0;
-            chkVF.Text = "Questions V/F";
-            chkVF.UseVisualStyleBackColor = true;
-            // 
             // chkSM
             // 
             chkSM.AutoSize = true;
@@ -106,6 +99,16 @@
             chkSM.Text = "Questions Selection Multiple";
             chkSM.UseVisualStyleBackColor = true;
             // 
+            // chkVF
+            // 
+            chkVF.AutoSize = true;
+            chkVF.Location = new Point(215, 41);
+            chkVF.Name = "chkVF";
+            chkVF.Size = new Size(137, 22);
+            chkVF.TabIndex = 0;
+            chkVF.Text = "Questions V/F";
+            chkVF.UseVisualStyleBackColor = true;
+            // 
             // ChercherQuestion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -114,7 +117,7 @@
             Name = "ChercherQuestion";
             Size = new Size(993, 614);
             groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridConsulterQuestions).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ResumeLayout(false);
@@ -124,7 +127,7 @@
 
         private Button btnConsulter;
         private GroupBox groupBox1;
-        private DataGridView dataGridConsulterQuestions;
+        private DataGridView dataGridView1;
         private GroupBox groupBox2;
         private CheckBox chkSM;
         private CheckBox chkVF;

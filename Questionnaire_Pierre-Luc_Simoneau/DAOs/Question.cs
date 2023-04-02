@@ -18,6 +18,9 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         public bool ReponseVF { get; set; }
         public List<string>? PropositionSM { get; set; }
         public List<string>? ReponseSM { get; set; }
+        public string TypeDisplay => Type ? "Vrai/Faux" : "Choix multiple";
+        public string PropositionsDisplay => Type ? "" : string.Join(", ", PropositionSM);
+        public string ReponsesDisplay => Type ? (ReponseVF ? "Vrai" : "Faux") : string.Join(", ", ReponseSM);
 
         public Question()
         {
@@ -46,15 +49,12 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
 
         public override string ToString()
         {
-            string propSMString = PropositionSM != null ? string.Join(",", PropositionSM) : "";
-            string repSMString = ReponseSM != null ? string.Join(",", ReponseSM) : "";
-
-            return Id + ";" +
-                Enonce + ";" +
-                Type + ";" +
-                ReponseVF+ ";" +
-                propSMString + ";" +
-                repSMString;
+           return Id + ";" +
+           Enonce + ";" +
+           TypeDisplay + ";" +
+           ReponseVF + ";" +
+           PropositionsDisplay + ";" +
+           ReponsesDisplay;
         }
 
         public override int GetHashCode()

@@ -58,5 +58,11 @@ namespace Questionnaire_Pierre_Luc_Simoneau
             panel1.Controls.Clear();
             panel1.Controls.Add(new ModifierQuestion());
         }
+
+        private void chercherToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.Controls.Add(new ChercherQuestion());
+        }
     }
 }

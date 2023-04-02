@@ -122,6 +122,7 @@
             chercherToolStripMenuItem1.Name = "chercherToolStripMenuItem1";
             chercherToolStripMenuItem1.Size = new Size(180, 22);
             chercherToolStripMenuItem1.Text = "Chercher";
+            chercherToolStripMenuItem1.Click += chercherToolStripMenuItem1_Click;
             // 
             // gestionRésultatToolStripMenuItem
             // 
