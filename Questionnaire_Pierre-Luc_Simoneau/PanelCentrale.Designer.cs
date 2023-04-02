@@ -49,7 +49,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { gestionUserToolStripMenuItem, gestionQuestionToolStripMenuItem, gestionRésultatToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1072, 24);
+            menuStrip1.Size = new Size(1472, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -63,28 +63,28 @@
             // ajouterToolStripMenuItem
             // 
             ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            ajouterToolStripMenuItem.Size = new Size(180, 22);
+            ajouterToolStripMenuItem.Size = new Size(129, 22);
             ajouterToolStripMenuItem.Text = "Ajouter";
             ajouterToolStripMenuItem.Click += ajouterToolStripMenuItem_Click;
             // 
             // supprimerToolStripMenuItem
             // 
             supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            supprimerToolStripMenuItem.Size = new Size(180, 22);
+            supprimerToolStripMenuItem.Size = new Size(129, 22);
             supprimerToolStripMenuItem.Text = "Supprimer";
             supprimerToolStripMenuItem.Click += supprimerToolStripMenuItem_Click;
             // 
             // modifierToolStripMenuItem
             // 
             modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            modifierToolStripMenuItem.Size = new Size(180, 22);
+            modifierToolStripMenuItem.Size = new Size(129, 22);
             modifierToolStripMenuItem.Text = "Modifier";
             modifierToolStripMenuItem.Click += modifierToolStripMenuItem_Click;
             // 
             // chercherToolStripMenuItem
             // 
             chercherToolStripMenuItem.Name = "chercherToolStripMenuItem";
-            chercherToolStripMenuItem.Size = new Size(180, 22);
+            chercherToolStripMenuItem.Size = new Size(129, 22);
             chercherToolStripMenuItem.Text = "Chercher";
             chercherToolStripMenuItem.Click += chercherToolStripMenuItem_Click;
             // 
@@ -101,6 +101,7 @@
             ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
             ajouterToolStripMenuItem1.Size = new Size(129, 22);
             ajouterToolStripMenuItem1.Text = "Ajouter";
+            ajouterToolStripMenuItem1.Click += ajouterToolStripMenuItem1_Click;
             // 
             // supprimerToolStripMenuItem1
             // 
@@ -128,17 +129,19 @@
             // 
             // panel1
             // 
+            panel1.AutoSize = true;
+            panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 24);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1072, 823);
+            panel1.Size = new Size(1472, 919);
             panel1.TabIndex = 1;
             // 
             // PanelCentrale
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1072, 847);
+            ClientSize = new Size(1472, 943);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;

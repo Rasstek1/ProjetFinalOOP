@@ -30,7 +30,6 @@
         {
             BtnAnnuler = new Button();
             BtnAjouter = new Button();
-            groupBox1 = new GroupBox();
             pnlBonneReponse = new Panel();
             label2 = new Label();
             txtEnonce = new TextBox();
@@ -38,59 +37,48 @@
             groupBox2 = new GroupBox();
             radioBtnSM = new RadioButton();
             radioBtnVF = new RadioButton();
-            groupBox1.SuspendLayout();
+            panel1 = new Panel();
+            label3 = new Label();
             groupBox2.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // BtnAnnuler
             // 
             BtnAnnuler.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnAnnuler.Location = new Point(517, 612);
+            BtnAnnuler.Location = new Point(477, 570);
             BtnAnnuler.Margin = new Padding(2);
             BtnAnnuler.Name = "BtnAnnuler";
             BtnAnnuler.Size = new Size(176, 44);
             BtnAnnuler.TabIndex = 5;
             BtnAnnuler.Text = "Annuler";
             BtnAnnuler.UseVisualStyleBackColor = true;
+            BtnAnnuler.Click += BtnAnnuler_Click;
             // 
             // BtnAjouter
             // 
             BtnAjouter.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnAjouter.Location = new Point(270, 612);
+            BtnAjouter.Location = new Point(230, 570);
             BtnAjouter.Margin = new Padding(2);
             BtnAjouter.Name = "BtnAjouter";
             BtnAjouter.Size = new Size(173, 44);
             BtnAjouter.TabIndex = 4;
             BtnAjouter.Text = "Ajouter";
             BtnAjouter.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(pnlBonneReponse);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txtEnonce);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(groupBox2);
-            groupBox1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point);
-            groupBox1.Location = new Point(12, 19);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1003, 569);
-            groupBox1.TabIndex = 3;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Ajouter Question";
+            BtnAjouter.Click += BtnAjouter_Click;
             // 
             // pnlBonneReponse
             // 
-            pnlBonneReponse.Location = new Point(24, 348);
+            pnlBonneReponse.Location = new Point(33, 378);
             pnlBonneReponse.Name = "pnlBonneReponse";
-            pnlBonneReponse.Size = new Size(945, 215);
+            pnlBonneReponse.Size = new Size(505, 187);
             pnlBonneReponse.TabIndex = 4;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(24, 307);
+            label2.Location = new Point(33, 353);
             label2.Name = "label2";
             label2.Size = new Size(168, 22);
             label2.TabIndex = 3;
@@ -98,7 +86,7 @@
             // 
             // txtEnonce
             // 
-            txtEnonce.Location = new Point(106, 164);
+            txtEnonce.Location = new Point(115, 194);
             txtEnonce.Multiline = true;
             txtEnonce.Name = "txtEnonce";
             txtEnonce.Size = new Size(753, 141);
@@ -108,7 +96,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(24, 224);
+            label1.Location = new Point(33, 254);
             label1.Name = "label1";
             label1.Size = new Size(75, 22);
             label1.TabIndex = 1;
@@ -119,7 +107,7 @@
             groupBox2.Controls.Add(radioBtnSM);
             groupBox2.Controls.Add(radioBtnVF);
             groupBox2.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            groupBox2.Location = new Point(24, 64);
+            groupBox2.Location = new Point(33, 94);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(834, 94);
             groupBox2.TabIndex = 0;
@@ -137,6 +125,7 @@
             radioBtnSM.TabStop = true;
             radioBtnSM.Text = "Questions Selections Multiples";
             radioBtnSM.UseVisualStyleBackColor = true;
+            radioBtnSM.CheckedChanged += radioBtnSM_CheckedChanged;
             // 
             // radioBtnVF
             // 
@@ -149,28 +138,53 @@
             radioBtnVF.TabStop = true;
             radioBtnVF.Text = "Question Vrai/Faux";
             radioBtnVF.UseVisualStyleBackColor = true;
+            radioBtnVF.CheckedChanged += radioBtnVF_CheckedChanged;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ControlLightLight;
+            panel1.Controls.Add(label3);
+            panel1.Location = new Point(127, 28);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(644, 38);
+            panel1.TabIndex = 9;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(192, 3);
+            label3.Name = "label3";
+            label3.Size = new Size(219, 30);
+            label3.TabIndex = 0;
+            label3.Text = "Ajouter une Question";
             // 
             // AjouterQuestion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panel1);
+            Controls.Add(pnlBonneReponse);
             Controls.Add(BtnAnnuler);
+            Controls.Add(label2);
             Controls.Add(BtnAjouter);
-            Controls.Add(groupBox1);
+            Controls.Add(txtEnonce);
+            Controls.Add(label1);
+            Controls.Add(groupBox2);
             Name = "AjouterQuestion";
-            Size = new Size(1027, 686);
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            Size = new Size(893, 849);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button BtnAnnuler;
         private Button BtnAjouter;
-        private GroupBox groupBox1;
         private Panel pnlBonneReponse;
         private Label label2;
         private TextBox txtEnonce;
@@ -178,5 +192,7 @@
         private GroupBox groupBox2;
         private RadioButton radioBtnSM;
         private RadioButton radioBtnVF;
+        private Panel panel1;
+        private Label label3;
     }
 }

@@ -46,12 +46,15 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
 
         public override string ToString()
         {
+            string propSMString = PropositionSM != null ? string.Join(",", PropositionSM) : "";
+            string repSMString = ReponseSM != null ? string.Join(",", ReponseSM) : "";
+
             return Id + ";" +
                 Enonce + ";" +
                 Type + ";" +
-                ReponseVF + ";" +
-                PropositionSM + ";" +
-                ReponseSM;
+                ReponseVF+ ";" +
+                propSMString + ";" +
+                repSMString;
         }
 
         public override int GetHashCode()

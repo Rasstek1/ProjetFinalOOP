@@ -93,7 +93,7 @@
             groupBox2.Size = new Size(996, 215);
             groupBox2.TabIndex = 0;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Choisir un/des critères de recherche";
+            groupBox2.Text = "Critères de recherche";
             // 
             // btnChercher
             // 
@@ -192,7 +192,7 @@
             Controls.Add(groupBox1);
             Controls.Add(panel1);
             Name = "ChercherUser";
-            Size = new Size(1215, 698);
+            Size = new Size(1079, 698);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
