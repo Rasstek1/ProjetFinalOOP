@@ -115,6 +115,7 @@
             modifierToolStripMenuItem1.Name = "modifierToolStripMenuItem1";
             modifierToolStripMenuItem1.Size = new Size(180, 22);
             modifierToolStripMenuItem1.Text = "Modifier";
+            modifierToolStripMenuItem1.Click += modifierToolStripMenuItem1_Click;
             // 
             // chercherToolStripMenuItem1
             // 

@@ -27,10 +27,7 @@ namespace Questionnaire_Pierre_Luc_Simoneau
                 MessageBox.Show("Aucun utilisateur trouvé");
             }
             else
-            {
-               
-
-                
+            {                                             
                 textBoxNom.Text = user.Nom;
                 textBoxPrenom.Text = user.Prenom;
                 textBoxTelephone.Text = user.Telephone;

@@ -12,7 +12,7 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         static int count = 0;
         
 
-        public int Id { get; private set; }
+        public int Id { get; internal set; }
         public string Enonce { get; set; }
         public bool Type { get; set;}
         public bool ReponseVF { get; set; }

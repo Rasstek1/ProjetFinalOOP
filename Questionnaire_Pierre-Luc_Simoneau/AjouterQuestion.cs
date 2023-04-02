@@ -79,7 +79,7 @@ namespace Questionnaire_Pierre_Luc_Simoneau
                     MessageBox.Show("Vous devez choisir la bonne réponse");
                 }
             }
-            //else if the SM radio button is checked, check which txtboxes from the ReponseSM control are filled. Those that are not empty are added to the list of PropositionSM property of the new question, and if the corresponding checkbox is checked, we also add the textbox text to the list of ReponseSM property of the question
+            
             else if(radioBtnSM.Checked)
             {
                 ReponseSM reponseSM = pnlBonneReponse.Controls[0] as ReponseSM;

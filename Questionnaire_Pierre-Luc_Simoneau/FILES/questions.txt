@@ -1,3 +1,4 @@
-4;2+2=5;True;False;;
 5;X>10;False;False;1,5,11,21;11,21
 6;10-1=9;True;True;;
+7;2+2=4;True;True;;
+4;2+2=4;True;True;;
