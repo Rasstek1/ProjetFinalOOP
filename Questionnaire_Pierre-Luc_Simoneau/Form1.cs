@@ -4,6 +4,8 @@ namespace Questionnaire_Pierre_Luc_Simoneau
 {
     public partial class Form1 : Form
     {
+        public User LoggedInUser { get; private set; }
+
         public Form1()
         {
             InitializeComponent();
@@ -26,20 +28,23 @@ namespace Questionnaire_Pierre_Luc_Simoneau
             bool type = (radioButtonUser.Checked == true) ? false : true;
 
             var userDAO = UserDAOFactory.CreerUserDAO("FILE");
-            var user = userDAO.ChercherParLoginMPType(login,mp,type);
-            if(user == null)
+            var user = userDAO.ChercherParLoginMPType(login, mp, type);
+            if (user == null)
             {
                 MessageBox.Show("Aucun utilisateur trouvé");
-                 
-            }
-            else if(type)
-            {
-                new PanelCentrale().Show();
-                
             }
             else
             {
-                new UserPanel().Show();
+                LoggedInUser = user;
+                if (type)
+                {
+                    new PanelCentrale().Show();
+                }
+                else
+                {
+                    UserPanel userPanel = new UserPanel(user);
+                    userPanel.Show();
+                }
             }
         }
 
