@@ -30,21 +30,10 @@ namespace Questionnaire_Pierre_Luc_Simoneau
         {//validate that both txtboxes are not empty,then create a Questionnaire
             if (txtNbrQuestions.Text != "" && txtScore.Text != "")
             {
-                Questionnaire questionnaire = new Questionnaire();
-
                 if (!int.TryParse(txtNbrQuestions.Text, out int nbrQuestions)) MessageBox.Show("Veuillez entrer un nombre valide");
                 if (!int.TryParse(txtScore.Text, out int scoreDePassage)) MessageBox.Show("Veuillez entrer un nombre valide");
-
-                List<Question> questions = QuestionDAOFactory.CreerQuestionDAO("FILE").ChercherTout();
-
-                // Shuffle the list of questions
-                Random random = new Random();
-                List<Question> shuffledQuestions = questions.OrderBy(q => random.Next()).ToList();
-
-                
-                questionnaire.Questions = shuffledQuestions.Take(nbrQuestions).ToList();
-                questionnaire.User = loggedInUser;
-                questionnaire.ScoreDePassage = scoreDePassage;
+                Questionnaire questionnaire = new Questionnaire(nbrQuestions,scoreDePassage,loggedInUser);                
+                new QuestionnairePanel(questionnaire).Show();
 
             }
             else

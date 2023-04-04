@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questionnaire_Pierre_Luc_Simoneau.DAOs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,6 +64,17 @@ namespace Questionnaire_Pierre_Luc_Simoneau
         {
             panel1.Controls.Clear();
             panel1.Controls.Add(new ChercherQuestion());
+        }
+
+        private void gestionRésultatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            AfficherResultats afficherResultats = new AfficherResultats();
+            panel1.Controls.Add(afficherResultats);
+
+            List<Questionnaire> questionnaires = ResultatDAOFactory.CreerResultatDAO("FILE").ChercherTout();
+            afficherResultats.SetDataSource(questionnaires);
+
         }
     }
 }

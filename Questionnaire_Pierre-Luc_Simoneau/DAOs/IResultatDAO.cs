@@ -8,6 +8,7 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
 {
     internal interface IResultatDAO
     {
+        void Ajouter(Questionnaire q);
         List<Questionnaire>? ChercherTout();
     }
 }

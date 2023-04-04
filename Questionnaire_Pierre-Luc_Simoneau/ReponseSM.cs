@@ -15,6 +15,14 @@ namespace Questionnaire_Pierre_Luc_Simoneau
         public ReponseSM()
         {
             InitializeComponent();
+            //if parent for is QuestionnairePanel, disable the 4 txtboxes
+            if (Parent is QuestionnairePanel)
+            {
+                txtReponse1.Enabled = false;
+                txtReponse2.Enabled = false;
+                txtReponse3.Enabled = false;
+                txtReponse4.Enabled = false;
+            }
         }
 
 

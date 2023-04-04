@@ -43,7 +43,7 @@
             // chkReponse1
             // 
             chkReponse1.AutoSize = true;
-            chkReponse1.Location = new Point(3, 32);
+            chkReponse1.Location = new Point(3, 27);
             chkReponse1.Name = "chkReponse1";
             chkReponse1.Size = new Size(15, 14);
             chkReponse1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // chkReponse2
             // 
             chkReponse2.AutoSize = true;
-            chkReponse2.Location = new Point(229, 32);
+            chkReponse2.Location = new Point(229, 27);
             chkReponse2.Name = "chkReponse2";
             chkReponse2.Size = new Size(15, 14);
             chkReponse2.TabIndex = 1;
@@ -85,7 +85,7 @@
             // 
             // txtReponse2
             // 
-            txtReponse2.Location = new Point(250, 28);
+            txtReponse2.Location = new Point(250, 23);
             txtReponse2.Name = "txtReponse2";
             txtReponse2.Size = new Size(199, 23);
             txtReponse2.TabIndex = 5;

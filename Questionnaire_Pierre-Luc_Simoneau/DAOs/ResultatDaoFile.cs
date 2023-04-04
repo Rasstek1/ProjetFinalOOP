@@ -9,6 +9,14 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
     internal class ResultatDaoFile : IResultatDAO
     {
         private string path = @"..\..\..\FILES\resultats.txt";
+
+        public void Ajouter(Questionnaire q)
+        {
+            List<string> tab = File.ReadAllLines(path).ToList();
+            tab.Add(q.ToString());
+            File.WriteAllLines(path, tab);
+        }
+
         public List<Questionnaire>? ChercherTout()//use model from other daoFile to implement cherchertout() qith questionnaire class
         {
             List<string> tab = File.ReadAllLines(path).ToList();
@@ -22,7 +30,7 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
                 q.Id = int.Parse(tabDecomposer[0]);
                 q.ScoreDePassage = int.Parse(tabDecomposer[1]);
                 q.ScoreObtenu = int.Parse(tabDecomposer[2]);
-                q.User.Login = tabDecomposer[3];                
+                q.UserLogin = tabDecomposer[3];                
                 listeQuestionnaire.Add(q);
             }
             return listeQuestionnaire;
