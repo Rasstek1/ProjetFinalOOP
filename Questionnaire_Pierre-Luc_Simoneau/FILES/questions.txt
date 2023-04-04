@@ -1,5 +1,5 @@
-2;1+1=2;True;True;;
-4;10-5=?;False;False;5, 4, 12, 3;5
-5;7>=X=true;False;False;7, 4, 31, 12;7, 4
-1;7-2 =?;False;False;5, 1, 6, 2;5
-3;Quel est la couleur du cheval blanc de Napoleon?;False;False;blanc, ta yeule, brun?, je sais tu, moé;blanc
+1;1+1=2;True;True;;Vrai
+2;10-5=?;False;False;5,  4,  12,  3;5
+3;7>=X=true;False;False;7,  4,  31,  12;7,  4
+4;7-2 =?;False;False;5,  1,  6,  2;5
+5;Quel est la couleur du cheval blanc de Napoleon?;False;False;blanc, rose,  brun?,  je sais pas;blanc

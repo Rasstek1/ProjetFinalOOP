@@ -14,7 +14,6 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         public int ScoreDePassage { get; set; }
         public User User { get; set; }
         public List<Question> Questions { get; set; }
-        public string QuestionDisplay => string.Join(", ", Questions);
 
         public Questionnaire()
         {
@@ -31,12 +30,10 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         }
         public override string ToString()
         {
-            return Id + ";" +
-                User.Login + ";" +
+            return Id + ";" +                
                 ScoreDePassage + ";" +
                 ScoreObtenu + ";" +
-                VerifierScore().ToString() + ";" + // Call VerifierScore() method and convert to string
-                QuestionDisplay;
+                User.Login;
         }
     }
 }

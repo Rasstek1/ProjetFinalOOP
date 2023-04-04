@@ -13,6 +13,5 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         void Modifier(Question q);
         List<Question>? ChercherTout();
         Question? ChercherParId(int id);
-        
     }
 }
