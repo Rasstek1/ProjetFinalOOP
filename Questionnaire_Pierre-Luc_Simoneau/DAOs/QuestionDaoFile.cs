@@ -12,14 +12,11 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
         private string path = @"..\..\..\FILES\questions.txt";
         public void Ajouter(Question q)
         {
-            //do I still need this if statement if the id is incremented automatically? 
 
-
-            if(ChercherParId(q.Id)==null)
-            {
+                q.Id = GenerateUniqueId();
                 string contenu = q.ToString() + "\n";
                 File.AppendAllText(path, contenu);
-            }
+            
         }
 
         public Question? ChercherParId(int id)
@@ -71,5 +68,36 @@ namespace Questionnaire_Pierre_Luc_Simoneau.DAOs
             }
             
         }
+        private int GenerateUniqueId()
+        {
+            List<Question> questions = ChercherTout();
+            if (questions.Count == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                int currentId = 1;
+                bool foundUnusedId = false;
+
+                while (!foundUnusedId)
+                {
+                    foundUnusedId = true;
+                    foreach (Question q in questions)
+                    {
+                        if (q.Id == currentId)
+                        {
+                            foundUnusedId = false;
+                            currentId++;
+                            break;
+                        }
+                    }
+                }
+
+                return currentId;
+            }
+        }
+
+
     }
 }

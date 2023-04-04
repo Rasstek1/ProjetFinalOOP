@@ -72,6 +72,7 @@ namespace Questionnaire_Pierre_Luc_Simoneau
                     Question question = new Question(txtEnonce.Text, true, bonneReponse.Value);                    
                     var questionDAO = QuestionDAOFactory.CreerQuestionDAO("FILE");
                     questionDAO.Ajouter(question);
+                    MessageBox.Show("Question ajoutée avec succès");
 
                 }
                 else
@@ -119,6 +120,7 @@ namespace Questionnaire_Pierre_Luc_Simoneau
                 }
                 if (propositions.Count > 0 && reponses.Count > 0)
                 {
+                    // Update the constructor call to include multiple correct answers
                     Question question = new Question(txtEnonce.Text, false, propositions, reponses);
                     var questionDAO = QuestionDAOFactory.CreerQuestionDAO("FILE");
                     questionDAO.Ajouter(question);

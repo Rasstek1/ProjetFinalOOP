@@ -27,13 +27,14 @@ namespace Questionnaire_Pierre_Luc_Simoneau
 
 
             Question question = QuestionDAOFactory.CreerQuestionDAO("FILE").ChercherParId(id);
-            txtEnonce.Text = question.Enonce;
+            
             if (question == null)
             {
                 MessageBox.Show("Aucune question trouvée avec ce ID");
             }
             else
             {
+                txtEnonce.Text = question.Enonce;
                 if (question.Type == true)
                 {
                     rbVF.Checked = true;
