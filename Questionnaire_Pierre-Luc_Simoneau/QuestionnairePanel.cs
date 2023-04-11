@@ -115,5 +115,10 @@ namespace Questionnaire_Pierre_Luc_Simoneau
                 this.Close();
             }
         }
+
+        private void pnlReponses_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
